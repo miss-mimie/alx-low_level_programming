@@ -8,18 +8,13 @@
  */
 void print_dog(struct dog *d)
 {
-	if (d)
-	{
-		if (!(d->name))
-			printf("Name: (nil)\n");
-		else
-			printf("Name: %s\n", d->name);
+	if (d == NULL)
+		return; /* instance not initialized, nothing to print */
 
-		printf("Age: %ff\n", d->age);
-
-		if (!(d->owner))
-			printf("Owner: (nil)\n");
-		else
-			printf("Owner: %s\n", d->owner);
-	}
+	printf("Name: %s\n", ((d->name) ? d->name : "(nil)"));
+	if (d->age >= 0.0)
+		printf("Age: %f\n", d->age);
+	else
+		puts("Age: (nil)");
+	printf("Owner: %s\n", ((d->owner) ? d->owner : "(nil)"));
 }
