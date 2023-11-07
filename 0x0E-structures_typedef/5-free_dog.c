@@ -2,18 +2,17 @@
 #include "dog.h"
 
 /**
- * free_dog - free memory space allocated for instance of a dog entity
- * @_dog: pointer to an instance of the dog structure
+ * free_dog - this function frees the dogd
+ * @d: struct dog
+ *
+ * Return: void
  */
-void free_dog(dog_t *_dog)
+void free_dog(dog_t *d)
 {
-	if (_dog == NULL)
-		returm;
-
-	/* free memory space allocated for name and owner members */
-	if (_dog->name != NULL)
-		free(_dog->name);
-	if (_dog->owner != NULL)
-		free(_dog->owner);
-	free(_dog);
+	if (d)
+	{
+		free(d->name);
+		free(d->owner);
+		free(d);
+	}
 }
