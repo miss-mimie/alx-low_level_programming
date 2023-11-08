@@ -1,6 +1,3 @@
-#include "FUNC_POINTERS.H"
-#include <stdio.h>
-
 /**
  * print_name - this prints the name
  * @name: this is the name to print
