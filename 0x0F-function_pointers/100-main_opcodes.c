@@ -13,7 +13,7 @@ void print_opcodes(const void *start, int num_bytes);
  */
 int main(int argc, char *argv[])
 {
-	jnt num_bytes;
+	int num_bytes;
 
 	if (argc != 2)
 	{
@@ -23,8 +23,14 @@ int main(int argc, char *argv[])
 
 	num_bytes = atoi(argv[1]);
 
+	/* check for jnvalid bytes */
+	if (num_bytes < 0)
+	{
+		puts("Error");
+		exit(2);
+	}
 	/* print the opcodes */
-	pring_opcodes((void *) majn, num_bytes);
+	print_opcodes((void *) main, num_bytes);
 
 	return (0);
 }
