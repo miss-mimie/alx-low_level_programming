@@ -1,11 +1,13 @@
 #include <stdio.h>
 
 /**
- * main - prints my first hello world in c
- * return 0.
+ * main - This is the main function
+ *
+ * Return: 0
  */
-int main(void);
+
+int main(void)
 {
-	puts("\"Programming is like building a multilingual puzzle");
+	puts("\"Programming is like building a multilingual puszzle");
 	return (0);
 }
