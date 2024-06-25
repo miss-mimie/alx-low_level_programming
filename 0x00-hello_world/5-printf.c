@@ -1,12 +1,13 @@
 #include <stdio.h>
 
 /**
- * main - prints the outcome of proper grammar in coding
- * return (0)
+ * main - This is the main function
+ *
+ * Returns: 0
  */
 
-int main(void);
+int main(void)
 {
-	printf("with proper grammar, but the outcome is a piece of art\n");
+	printf("with proper grammar, but the outcome is a piece of art,\n");
 	return (0);
 }
