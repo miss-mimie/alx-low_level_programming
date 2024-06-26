@@ -1,7 +1,9 @@
-#include <main.h>
+#include "main.h"
 
 /**
  * main - Entry point
+ *
+ * Description: This is a program that prints putchar followed by a new line
  *
  * Return: 0
  */
