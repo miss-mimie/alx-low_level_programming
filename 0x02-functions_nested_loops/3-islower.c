@@ -1,18 +1,19 @@
 #include "main.h"
 
 /**
- * print_alphabet - Entry point
+ * _islower - Entry point
  *
- * Description: Prints alphabets in lowercase using only '_putchar'
+ * Description: checks for lower case characters
+ * @c: letter to check
  *
- * Return: 0
+ * Return: 1 if lower else 0
  */
 
-void print_alphabet(void)
+int _islower(int c)
 {
-	char c;
-
-	for (c = 'a'; c <= 'z'; c++)
-		_putchar(c);
-	_putchar('\n');
+	if (c > 96 && c < 123)
+		return (1);
+	else
+		return (0);
 }
+
