@@ -1,23 +1,32 @@
 #include "main.h"
 
 /**
- * print_line - Entry point
+ * print_diagonal - Entry point
  *
- * Description: Draws a straight line
- * @n: Length of line
+ * Description: draws a diagonal line
+ * @n: number of times \ should be printed
  *
  * Return: void
  */
 
-void print_line(int n)
+void print_diagonal(int n)
 {
-	int len;
+	int i, j;
 
-	if (n > 0)
+	if (n <= 0)
 	{
-		for (len = 0; len < n; len++)
-			_putchar('_');
+		_putchar('\n');
+		return;
 	}
-	_putchar('\n');
+	for (i = 0; i < n; i++)
+	{
+		for (j = 0; j <= 1; j++)
+		{
+			if (j != 1)
+				_putchar(' ');
+			else
+				_putchar('\\');
+		}
+		_putchar('\n');
+	}
 }
-
