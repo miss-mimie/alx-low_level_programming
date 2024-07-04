@@ -1,29 +1,17 @@
 #include <stdio.h>
 
 /**
- * main - Entry point
+ * main - printing the size of data types
  *
- * Return: Always 0 (Success)
- *
+ * Return: 0
  */
-
 int main(void)
 {
-    printf("Size of char: %zu byte(s)\n", sizeof(char));
-    printf("Size of int: %zu byte(s)\n", sizeof(int));
-    printf("Size of float: %zu byte(s)\n", sizeof(float));
-    printf("Size of double: %zu byte(s)\n", sizeof(double));
-    printf("Size of short: %zu byte(s)\n", sizeof(short));
-    printf("Size of long: %zu byte(s)\n", sizeof(long));
-    printf("Size of long long: %zu byte(s)\n", sizeof(long long));
+	printf("Size of a char: %ld byte(s)\n", sizeof(char));
+	printf("Size of an int: %ld byte(s)\n", sizeof(int));
+	printf("Size of a long int: %ld byte(s)\n", sizeof(long int));
+	printf("Size of a long long int: %ld byte(s)\n", sizeof(long long int));
+	printf("Size of a float: %ld byte(s)\n", sizeof(float));
 
-    printf("Size of pointer to char: %zu byte(s)\n", sizeof(char*));
-    printf("Size of pointer to int: %zu byte(s)\n", sizeof(int*));
-    printf("Size of pointer to float: %zu byte(s)\n", sizeof(float*));
-    printf("Size of pointer to double: %zu byte(s)\n", sizeof(double*));
-    printf("Size of pointer to short: %zu byte(s)\n", sizeof(short*));
-    printf("Size of pointer to long: %zu byte(s)\n", sizeof(long*));
-    printf("Size of pointer to long long: %zu byte(s)\n", sizeof(long long*));
-
-    return 0;
+	return (0);
 }
