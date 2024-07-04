@@ -1,15 +1,9 @@
 #include <stdio.h>
-#include "main.h"
 
 /**
- * main - Entry point
- *
- * Description: prints fizz for multiples of 3,
- * buzz for multiples of 5 and fizzbuzz for multiples of 15
- *
- * Return: 0;
+ * main - The Fizz-Buzz test
+ * Return: 0
  */
-
 int main(void)
 {
 	int i;
@@ -17,17 +11,17 @@ int main(void)
 	for (i = 1; i <= 100; i++)
 	{
 		if (i % 3 == 0 && i % 5 == 0)
-			printf("Fizzbuzz");
+			printf("FizzBuzz");
 		else if (i % 3 == 0)
 			printf("Fizz");
-		else if (i % 5)
+		else if (i % 5 == 0)
 			printf("Buzz");
 		else
 			printf("%d", i);
 		if (i != 100)
 			putchar(' ');
 	}
-	_putchar('\n');
+	putchar('\n');
 
-		return (0);
+	return (0);
 }
