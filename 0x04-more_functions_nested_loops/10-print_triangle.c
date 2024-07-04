@@ -1,12 +1,10 @@
 #include "main.h"
 
 /**
- * print_triangle - Entry point
+ * print_triangle - prints mario-type triangles
  *
- * Description: prints a triangle using #
- * @size: height of the trianlge
+ * @size: height of triangle
  */
-
 void print_triangle(int size)
 {
 	int i, j, s;
@@ -18,12 +16,10 @@ void print_triangle(int size)
 	}
 	for (i = 1; i <= size; i++)
 	{
-		for (s = size - 1; s != 0; s--)
+		for (s = size - i; s != 0; s--)
 			_putchar(' ');
 		for (j = 1; j <= i; j++)
 			_putchar('#');
 		_putchar('\n');
 	}
 }
-
-
