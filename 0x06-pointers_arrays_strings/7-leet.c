@@ -1,29 +1,23 @@
-#include "main.h"
-
 /**
- * leet - encode a string into 1337
+ * leet - encodes a given string
  * @s: string
  *
- * Return: endoded string 's'
+ * Return: encoded string
  */
-
 char *leet(char *s)
 {
-	int a, b;
+	int i, j;
+	char letters[] = "aeotl";
+	char map[] = "43071";
 
-	char s1[] = "aAeE0OtTlL";
-	char s2[] = "4433007711";
-
-	for (a = 0; s[a] != '\0'; a++)
+	for (i = 0; s[i] != '\0'; i++)
 	{
-		for (b = 0; b < 10; b++)
+		for (j = 0; map[j] != '\0'; j++)
 		{
-			if (s[a] == s1[b])
-			{
-				s[a] = s2[b];
-			}
+			/* check for lower and upper case letters */
+			if (s[i] == letters[j] || s[i] + 32 == letters[j])
+				s[i] = map[j];
 		}
 	}
-
 	return (s);
 }
