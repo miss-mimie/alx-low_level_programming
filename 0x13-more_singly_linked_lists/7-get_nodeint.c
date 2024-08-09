@@ -1,31 +1,29 @@
 #include "lists.h"
 
 /**
- * get_nodeint_at_index - this returns the nth node of a linked list of integers
- * @head: head node
- * @index: index of the node (starts at 0)
+ * get_nodeint_at_index - returns the nth node of a linked list of integers
+ * @head: the head node
+ * @index: the index of the node (starts at 0)
  *
- * Return: address of the nth node if found, else NULL
+ * Return: the address of the nth node if found, else NULL
  */
-
 listint_t *get_nodeint_at_index(listint_t *head, unsigned int index)
 {
 	unsigned int i = 0;
 
 	if (head == NULL)
-		return (NULL); /* the list is empty */
+		return (NULL); /* the list is empty, there's nothing to search */
 
 	while (head != NULL)
 	{
 		if (i == index)
 		{
-			return (head); /*returns found node's address */
+			return (head); /* node found, return it's address */
 		}
-
 		/* node not found, keep searching */
 		head = head->next;
 		i++;
 	}
 
-	return (NULL); /* this node does not exist */
+	return (NULL); /* the node does not exist */
 }
