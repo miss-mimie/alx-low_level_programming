@@ -11,7 +11,7 @@ size_t print_dlistint(const dlistint_t *head)
 	size_t num_of_nodes = 0;
 
 	if (head == NULL)
-		return (num_of_nodes); /* empty */
+		return (num_of_nodes); /* the list is empty */
 
 	while (head != NULL)
 	{
