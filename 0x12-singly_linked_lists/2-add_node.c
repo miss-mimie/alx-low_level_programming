@@ -1,17 +1,18 @@
 #include <stdlib.h>
+#include <stdio.h>
 #include <string.h>
 #include "lists.h"
 
 /**
- * add_dnodeint - adds a head at the beginning of a dlistint_t list
+ * add_note - adds a head at the beginning of a dlistint_t list
  * @head: a pointer to the head node
  * @n: the number to insert
  *
  * Return: the address of the new node
  */
-dlistint_t *add_dnodeint(dlistint_t **head, const int n)
+list_t *add_note(list_t **head, const char *str);
 {
-	dlistint_t *new_node = malloc(sizeof(dlistint_t));
+	list_t *new_node = malloc(sizeof(list_t));
 
 	if (new_node == NULL)
 		return (NULL); /* malloc failed */
