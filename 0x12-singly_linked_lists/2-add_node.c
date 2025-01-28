@@ -1,34 +1,38 @@
 #include "lists.h"
 
 /**
- * add_node - This adds a new node at the beginning of a list
- * @head: The head node  
- * @str: the string data for the fucntion
+ * add_dnodeint - adds a head at the beginning of a dlistint_t list
+ * @head: a pointer to the head node
+ * @n: the number to insert
  *
- * Return: the address of the new element, or NULL if it failed
+ * Return: the address of the new node
  */
-list_t *add_node(list_t **head, const char *str)
+dlistint_t *add_dnodeint(dlistint_t **head, const int n)
 {
-	list_t *new_node;
-	char *dup_str;
+	dlistint_t *new_node = malloc(sizeof(dlistint_t));
 
-	new_node = malloc(sizeof(list_t));
 	if (new_node == NULL)
+		return (NULL); /* malloc failed */
+
+	new_node->n = n;
+	new_node->prev = NULL;
+
+	/* handle insertion when the list is empty */
+	if (*head == NULL)
 	{
-		return (NULL);
+		*head = new_node;
+		(*head)->next = NULL;
+	}
+	else
+	{
+		/* handle insertion when the list is not empty */
+		new_node->next = *head;
+		(*head)->prev = new_node;
+		if ((*head)->next != NULL)
+			(*head)->prev = new_node;
+
+		*head = new_node;
 	}
 
-	dup_str = strdup(str);
-	if (dup_str == NULL)
-	{
-		free(new_node);
-		return (NULL);
-	}
-
-	new_node->str = dup_str;
-	new_node->len = strlen(dup_str);
-	new_node->next = *head;
-	*head = new_node;
-
-	return (*head);
+	return (new_node);
 }
